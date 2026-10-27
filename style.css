@@ -1,0 +1,115 @@
+/* Basic page styling */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+margin :0;
+padding : 40px 20px;
+background-color: #111111;
+font-family: #ffffff;
+text-align : center;
+}
+/* Main heading */
+h1{
+    color:#f5c76e;
+    font-size: 42px;
+    margin-top: 80px;
+
+}
+/* Paragraph */
+p{
+    color: #cccccc;
+    font-size: 18px;
+    line-height:1.6;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #333333;
+}
+
+.logo {
+    color: #f5c76e;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #f5c76e;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Hero Heading */
+.hero h1 {
+    font-size: 55px;
+    color: #f5c76e;
+    margin-bottom: 20px;
+}
+
+/* Hero Description */
+.hero p {
+    font-size: 18px;
+    color: #cccccc;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Explore Gallery Button */
+.hero-btn {
+    display: inline-block;
+    background-color: #f5c76e;
+    color: #111111;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Button Hover Effect */
+.hero-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Hero Section Background */
+.hero {
+    min-height: 450px;
+    padding: 100px 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+.hero-container {
+    display: grid;
+    width:100%;
+    padding:10px;
+}
