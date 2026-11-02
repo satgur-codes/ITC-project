@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lens Society | Photography Club Portfolio</title>
+  <meta name="description" content="Best member submissions from our college photography club.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">Lens Society</a>
+    <nav aria-label="Main">
+      <a href="#gallery">Gallery</a>
+      <a href="#submit">Submit</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>The best frames from our campus, chosen by members.</h1>
+      <p>Browse the club's favourite photographs, like the ones you love, and send in your own.</p>
+      <p class="stats"><span id="statPhotos">0</span> photos &nbsp;|&nbsp; <span id="statLikes">0</span> likes</p>
+    </section>
+
+    <section id="gallery" class="wrap" aria-labelledby="galleryTitle">
+      <div class="head">
+        <h2 id="galleryTitle">Gallery</h2>
+        <div class="filters" role="group" aria-label="Filter by category"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>No photos in this category yet. Be the first to submit one.</p>
+    </section>
+
+    <section id="submit" class="wrap submit" aria-labelledby="submitTitle">
+      <div>
+        <h2 id="submitTitle">Submit your photo</h2>
+        <p>Members can add a photo to the gallery. This form works in your browser only, so nothing is uploaded to a server.</p>
+        <ul class="rules">
+          <li>JPG, PNG or WebP, up to 5 MB</li>
+          <li>Only photos you took yourself</li>
+          <li>Your photo appears at the top of the gallery straight away</li>
+        </ul>
+      </div>
+      <form id="form" novalidate>
+        <label>Your name<input name="name" type="text" autocomplete="name" required></label>
+        <small class="err" data-for="name"></small>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <small class="err" data-for="email"></small>
+        <label>Photo title<input name="title" type="text" maxlength="40" required></label>
+        <small class="err" data-for="title"></small>
+        <label>Category
+          <select name="category" required>
+            <option value="">Choose a category</option>
+            <option>Landscape</option><option>Animals</option><option>People</option><option>Architecture</option>
+          </select>
+        </label>
+        <small class="err" data-for="category"></small>
+        <label>Photo file<input name="photo" type="file" accept="image/jpeg,image/png,image/webp" required></label>
+        <small class="err" data-for="photo"></small>
+        <img id="preview" alt="Preview of your selected photo" hidden>
+        <button type="submit" class="btn">Add to gallery</button>
+        <p id="status" role="status"></p>
+      </form>
+    </section>
+
+    <section id="about" class="wrap about" aria-labelledby="aboutTitle">
+      <h2 id="aboutTitle">About the club</h2>
+      <p>Lens Society is a student photography club. We meet every week for photo walks, critiques and small exhibitions. This page showcases the best member submissions of the semester.</p>
+    </section>
+  </main>
+
+  <footer class="foot">Built by Group 22 for project #60, Photography Club Portfolio Page. Design inspired by TemplateMo 630 Helix Drift.</footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Enlarged photo" hidden>
+    <button class="x" id="mClose" aria-label="Close">&times;</button>
+    <button class="nav-btn prev" id="mPrev" aria-label="Previous photo">&#8249;</button>
+    <figure>
+      <img id="mImg" alt="">
+      <figcaption>
+        <div><strong id="mTitle"></strong><span id="mBy"></span></div>
+        <button class="like" id="mLike" aria-pressed="false"></button>
+      </figcaption>
+    </figure>
+    <button class="nav-btn next" id="mNext" aria-label="Next photo">&#8250;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
