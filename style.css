@@ -18,6 +18,12 @@ a{color:inherit}
 .hero p{margin-top:20px;max-width:55ch;color:var(--muted);font-size:1.1rem}
 .hero .stats{color:var(--accent);font-weight:600;letter-spacing:.5px}
 
+/* Center Hero Content */
+.hero{text-align:center}
+.hero h1{max-width:850px;margin:0 auto}
+.hero p{max-width:650px;margin:20px auto 0}
+.hero .stats{margin-top:20px}
+
 /* General Sections */
 .wrap{max-width:1200px;margin:auto;padding:65px clamp(16px,4vw,48px)}
 .head{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;margin-bottom:30px}
