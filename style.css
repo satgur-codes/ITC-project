@@ -100,9 +100,11 @@ input[type="file"]::file-selector-button{background:var(--accent);color:#111;bor
 .x:hover,.nav-btn:hover{background:var(--accent);color:#111}
 .x{position:absolute;top:16px;right:16px}
 
+/* Accessibility */
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
 /* Responsive Design */
 @media (max-width:760px){.submit{grid-template-columns:1fr;gap:25px}.nav nav a{margin-left:12px;font-size:.9rem}.brand{font-size:1.3rem}.nav-btn{position:absolute;bottom:20px}.prev{left:20px}.next{right:20px}.modal{padding:15px}.modal img{max-height:65vh}form{padding:20px}}
 @media (max-width:420px){.nav{padding:13px 12px}.nav nav a{margin-left:8px;font-size:.82rem}.brand{font-size:1.15rem}.hero h1{font-size:2.5rem}h2{font-size:2rem}}
 
-/* Accessibility */
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
