@@ -151,4 +151,26 @@ form.addEventListener("submit", e => {
   statusEl.textContent = "Photo added. Scroll up to see it at the top of the gallery.";
 });
 
+/* ---------- Theme Toggle (Dark / Light Mode) ---------- */
+const themeBtn = $("#themeToggle");
+function applyTheme(mode){
+  const isLight = mode === "light";
+  document.documentElement.setAttribute("data-theme", isLight ? "light" : "dark");
+  if (themeBtn) {
+    themeBtn.textContent = isLight ? "\u263E Dark" : "\u2600 Light";
+    themeBtn.setAttribute("aria-pressed", String(isLight));
+    themeBtn.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+  }
+}
+let savedTheme = "dark";
+try { savedTheme = localStorage.getItem("lensTheme") || "dark"; } catch (e) {}
+applyTheme(savedTheme);
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    applyTheme(next);
+    try { localStorage.setItem("lensTheme", next); } catch (e) {}
+  });
+}
+
 renderFilters(); render();
