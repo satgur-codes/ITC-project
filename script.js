@@ -2,7 +2,7 @@
 const P = (id, w, h) => `https://picsum.photos/id/${id}/${w}/${h}`;
 // Replace "src" with your club's real photos (e.g. "images/photo1.jpg") and edit names/titles.
 const photos = [
-  {id:"p1", src:P(1015,900,600), title:"River Bend",       by:"Riya Sharma",  cat:"Landscape",    likes:24},
+  {id:"p1", src:"https://static.vecteezy.com/system/resources/thumbnails/021/743/702/small/khalsa-sikh-religion-scared-symbol-icon-illustration-vector.jpg", title:"Khanda",       by:"Satgur Singh",  cat:"Sikhism",    likes:200},
   {id:"p2", src:P(1025,800,1000),title:"Sleepy Pug",       by:"Kabir Mehta",  cat:"Animals",      likes:41},
   {id:"p3", src:P(1018,900,700), title:"Morning Ridge",    by:"Neha Verma",   cat:"Landscape",    likes:17},
   {id:"p4", src:P(1011,800,1100),title:"Calm Water",       by:"Arjun Rao",    cat:"People",       likes:33},
